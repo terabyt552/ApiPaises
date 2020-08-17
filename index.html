@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucas Pereira">
+    <meta name="Description" content="Encontre informaçoes sobre qualquer país!">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="fontvendor/css/all.css">
+    <title>PaisesDoMundo</title>
+</head>
+<body>
+    <div class="navbar" >
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div>
+
+        <nav id="navMenuPrincipal">
+            <ul id="ulMenu">
+                <li class="liMenu">
+                    <a id="informaçoes">INFORMAÇÕES</a>
+                </li>
+
+                <li class="liMenu">
+                    <a id="Referencias">ATRIBUIÇOES</a>
+                </li>
+
+                <li class="liMenu">
+                    <a id="API">API</a>
+                </li>
+
+                <li class="liMenu">
+                    <a id="Programador">PROGRAMADOR</a>
+                </li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <header>
+        <img id="logoGlobo" src="assets/img/globo.svg" alt="LogoGlobo">
+    </header>
+
+    <main>
+
+        <div id="divUltimPesquisa">
+            <button id="ultimaPesquisa"></button> 
+             <p id="infPesquisa">Ultima Pesquisa!</p>
+           </div>
+
+        <section id="SectionPrincipalPesquisa">
+           
+           <img class="vazio" src="assets/img/Vazio.svg" alt="CampoPaisVazio"/>
+
+           <input id="inputPrincipal" type="text">
+           
+           <button id="buttonPesquisar">Pesquisar</button>
+
+        </section>
+
+        <section id="sectionResultado">
+
+            <ul class="ulDados">
+
+                <li class="liDados">
+                    <a>Nome</a>
+                    <div class="divInformaçao">
+                        <p id="name"></p>
+                    </div>
+                </li>
+    
+                <li class="liDados">
+                    <a>Território</a>
+                    <div class="divInformaçao">
+                        <p id="territorio"></p>
+                    </div>
+                </li>
+    
+                <li class="liDados">
+                    <a>Língua Falada</a>
+                    <div class="divInformaçao">
+                        <p id="lingFalada"></p>
+                    </div>
+                </li>
+
+            </ul>
+
+            <ul class="ulDados">
+    
+                <li class="liDados">
+                    <a>População</a>
+                    <div class="divInformaçao">
+                        <p id="populaçao"></p>
+                    </div>
+                </li>
+
+                <li class="liDados">
+                    <a>Capital</a>
+                    <div class="divInformaçao">
+                        <p id="capital"></p>
+                    </div>
+                </li>
+
+                <li class="liDados">
+                    <a>Região</a>
+                    <div class="divInformaçao">
+                        <p id="regiao"></p>
+                    </div>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+</body>
+<script src="assets/js/script.js"></script>
+</html>
