@@ -24,7 +24,7 @@ var nomePais = 0;
 
 var opçoes = {
     method: 'GET',
-    mode: 'no-cors',
+    mode: 'cors',
     cache: 'default'
 }
 
