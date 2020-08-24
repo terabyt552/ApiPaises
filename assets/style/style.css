@@ -3,6 +3,36 @@
     --cor-secundaria:rgb(112, 176, 228);
     --cinza-escuro:rgb(51, 51, 51);
     --branco:rgb(230, 230, 230);
+    --textColor:rgb(54, 54, 54);
+}
+
+
+@font-face {
+    font-family: 'Dosis';
+    src: url('../font/FontTitulos/Dosis-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'DosisBold';
+    src: url('../font/FontTitulos/Dosis-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'DosisLight';
+    src: url('../font/FontTitulos/Dosis-Light.ttf');
+}
+
+#sectionEntrada {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#imgEntrada {
+    padding-top:2.3vh ;
+    padding-bottom:2.3vh ;
+    height: 52.1vh;
+    width: 100vw;
 }
 
 
@@ -30,6 +60,40 @@ textarea:focus, input:focus,button:focus, select:focus {
     
 }
 
+.caixaMenssagem {
+    position: absolute;
+    background-color: rgb(238, 247, 255);
+    width: 20vw;
+    height: 0px;
+    top:11vh;
+    left: 50vw;
+    transition: height 0.2s;
+    z-index: 1;
+}
+
+.mostrarCaixaMensagem {
+    border-radius: 15px;
+    border: 2px solid var(--cor-secundaria);
+    height: 5vh;
+}
+
+.pCaixaMenssagem {
+    display: none;
+    margin: 0px;
+    padding-left: 0.8vw;
+    padding-top: 2.5vh;
+    text-align: start;
+    font-size: 17;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+    color: var(--textColor); 
+}
+
+.mostrarPCaixaMenssagem {
+display: block;
+}
+
+
+
 div nav {
     position: absolute;
     background-color: var(--cor-secundaria);
@@ -38,7 +102,6 @@ div nav {
     width: 40vw;
     border-radius: 20px;
     transition: max-width 0.8s;
-
 }
 
 .mostrar {
@@ -51,12 +114,14 @@ div nav {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+
 }
 
 nav ul li a {
     color: white;
-    font-size: 16px;
     text-decoration: none;
+    font-family: Dosis, Arial, Helvetica, sans-serif;
+    font-size: 17px;
 }
 
 header {
@@ -70,13 +135,61 @@ header {
 }
 
 #logoGlobo {
+    position: absolute;
     height: 13vh;
     width: 25vw;
 }
 
+#logoGlobo:hover {
+    animation-name: logoHover;
+    animation-duration: 0.1s;
+    animation-iteration-count: inherit;
+}
+
+@keyframes logoHover {
+    25% {
+        padding-bottom: 8px;
+        
+    }
+
+    50% {
+        padding-top:8px ;
+       
+    }
+
+    75% {
+        padding-bottom: 8px;
+       
+    }
+
+    100% {
+        padding-top: 8px;
+        
+    }
+}
+
+
+
+
 main {
-    display: flex;
+    display: none;
     flex-direction: column;
+}
+
+#sectionBandeira {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px 15px 15px 15px;
+    border-bottom: 2px solid rgb(161, 161, 161);
+    background-color: rgb(240, 240, 240);
+    
+}
+
+#imgBandeira {
+    width: 80vw;
+    height: 40vh;
 }
 
 .titulo {
@@ -86,7 +199,9 @@ main {
     background-color: white;
     border: 0px;
     padding: 0px;
-    
+    font-family: dosis, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: var(--textColor); 
 }
 
 #SectionPrincipalPesquisa {
@@ -140,6 +255,9 @@ position: absolute;
 }
 
 
+
+
+
 #inputPrincipal {
     border: 1px solid rgb(202, 202, 202);
     border-radius: 5px;
@@ -162,22 +280,30 @@ border: 1px solid rgb(184, 184, 184);
 }
 
 #textoMovel {
-    color: var(--cor-principal) ;
+    color: var(--cor-principal);
     animation-name: letreiro;
-    animation-duration: 8s;
+    animation-duration: 12s;
     animation-iteration-count: infinite;
-    
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
 }
 
 @keyframes letreiro {
     from {
-        margin-left: 120%;
+        margin-left:80vw;
+       color:rgba(76, 157, 223, 0);
     }
 
+
     to{
-        margin-left: -120%;
-    }
+        color: var(--cor-principal) ;
+        margin-left:-0vw;
+    }  
 }
+
+
+
+
 
 .sectionResultado {
     display: flex;
@@ -194,9 +320,15 @@ border: 1px solid rgb(184, 184, 184);
     padding-left: 0;
 }
 
-liDados {
+.liDados {
     display: flex;
     flex-direction: column;
+}
+
+.liDados a {
+    font-family: DosisBold,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 15px;
+    color: var(--textColor); 
 }
 
 .divInformaçao {
@@ -206,8 +338,94 @@ liDados {
     background-color: white;
 }
 
+.divInformaçao p {
+    font-family: DosisLight,Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: var(--textColor); 
+}
+
 #blocosRegionais {
     text-align: center;
 
 }
 
+
+
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 15vh;
+    background-color: var(--cor-principal);
+    border-top: 2px solid rgb(63, 142, 206);
+}
+
+footer p {
+    font-family: Dosis,Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color:white;
+    margin: 0px;
+}
+
+
+
+
+@media(max-width: 1025px) {
+
+    .caixaMenssagem {
+        width: 63vw;
+        left: 37vw;
+    }
+
+    .pCaixaMenssagem {
+        padding-left:0.8vw ;
+        padding-top:2vh ;
+    }
+
+    #ulMenu {
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 2vw;
+    }
+    
+    .liMenu {
+        list-style: none;
+        margin: 10px 0px;
+    }
+
+    div nav {
+        width: 42vw;
+        border-radius: 2vw;
+        z-index:1;
+    }
+
+    .navbar {
+        z-index: 2;
+    }
+
+    @keyframes letreiro {
+    from {
+        margin-left:40vw;
+       color:rgba(76, 157, 223, 0);
+    }
+
+
+    to{
+        color: var(--cor-principal) ;
+        margin-left:-0vw;
+    }  
+}
+    
+}
+
+
+
+
+@media (min-width: 1200px) {
+    #imgEntrada{
+        width: 25vw;
+    }
+}

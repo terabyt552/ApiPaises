@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Lucas Pereira">
@@ -8,8 +9,10 @@
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="stylesheet" href="fontvendor/css/all.css">
     <title>PaisesDoMundo</title>
+
 </head>
 <body>
+
     <div class="navbar" >
         <i class="fas fa-bars"></i>
     </div>
@@ -17,9 +20,11 @@
     <div>
 
         <nav id="navMenuPrincipal">
+            
             <ul id="ulMenu">
+
                 <li class="liMenu">
-                    <a id="informaçoes">INFORMAÇÕES</a>
+                    <a id="informaçoes" href="#footer">INFORMAÇÕES</a>
                 </li>
 
                 <li class="liMenu">
@@ -27,44 +32,60 @@
                 </li>
 
                 <li class="liMenu">
-                    <a id="API">API</a>
+                    <a id="API" href="https://restcountries.eu/" target = _blank>API</a>
                 </li>
 
                 <li class="liMenu">
                     <a id="Programador">PROGRAMADOR</a>
                 </li>
+
             </ul>
+
         </nav>
 
     </div>
 
     <header>
+
         <img id="logoGlobo" src="assets/img/globo.svg" alt="LogoGlobo">
+
+        <div class="caixaMenssagem">
+
+            <p class ="pCaixaMenssagem"></p>
+
+        </div>
+
     </header>
+
+    <div id="divAreaInformaçoes">
+
+        <button id="areaInformaçoes"><div id="textoMovel">Informações sobre paises!</div></button>
+
+    </div>
+
+
+    <section id="SectionPrincipalPesquisa">
+       
+       <img class="vazio" src="assets/img/Vazio.svg" alt="CampoPaisVazio"/>
+
+       <input id="inputPrincipal" type="text">
+       
+       <button id="buttonPesquisar">Pesquisar</button>
+
+    </section>
+
+    <section id="sectionEntrada">
+
+    <img id="imgEntrada" src="../ApiPaises/assets/img/mundoFundo.jpg" alt="imagemDoGlobo">
+
+    </section>
 
     <main>
 
-        <div id="divAreaInformaçoes">
+        <section id="sectionBandeira">
 
-            <button id="areaInformaçoes"><div id="textoMovel"></div></button>
- 
-            </div>
- 
+            <img id="imgBandeira" src="" alt="bandeiraPaisPesquisado">
 
-        <section id="SectionPrincipalPesquisa">
-           
-           <img class="vazio" src="assets/img/Vazio.svg" alt="CampoPaisVazio"/>
-
-           <input id="inputPrincipal" type="text">
-           
-           <button id="buttonPesquisar">Pesquisar</button>
-
-        </section>
-        
-        <section>
-            <div>
-                <img src="" alt="">
-            </div>
         </section>
 
         <button class="titulo">Informações Gerais</button>
@@ -75,13 +96,17 @@
 
                 <li class="liDados">
                     <a>Nome</a>
+
                     <div class="divInformaçao">
+
                         <p id="name"></p>
+
                     </div>
                 </li>
     
                 <li class="liDados">
-                    <a>Area</a>
+                    <a>Território</a>
+
                     <div class="divInformaçao">
                         <p id="territorio"></p>
                     </div>
@@ -200,14 +225,28 @@
                 <li class="liDados" id="blocosRegionais">
                     <a>Blocos Regionais</a>
                     <div class="divInformaçao">
+
                         <p id="blocos"></p>
+
                     </div>
                 </li>
+
             <ul/>
+
         </section>
 
     </main>
 
+    <footer id="footer">
+
+        <p>Copyright@2003-2020</p>
+        <p>LUCAS PEREIRA TRINDADE</p>
+        <p>RestCountries@</p>
+
+    </footer>
+
 </body>
+
 <script src="assets/js/script.js"></script>
+
 </html>
